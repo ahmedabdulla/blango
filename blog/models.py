@@ -11,7 +11,7 @@ class Tag(models.Model):
     return self.value
 
 class Post(models.Model):
-  autho = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+  author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
   created_at = models.DateTimeField(auto_now_add=True)
   modified_at = models.DateTimeField(auto_now=True)
   published_at = models.DateTimeField(blank=True, null=True)
